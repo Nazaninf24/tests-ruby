@@ -28,6 +28,6 @@ def first_word(str)
 end
 
 def titleize(str)
-	str.split(/ |\_|\-/).map(&:capitalize).join(" ")
-end
+    str.split(/ |\_/).map(&:capitalize).join(" ")
+  end
 
