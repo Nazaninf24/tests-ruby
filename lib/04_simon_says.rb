@@ -14,7 +14,6 @@ nospace = String.new
 		nospace = (word + " ") * c
  		return nospace.chop
     end
-
 end
 
 def start_of_word(word, letter)
@@ -27,7 +26,8 @@ def first_word(str)
 	str.split.first
 end
 
-def titleize(str)
-    str.split(/ |\_/).map(&:capitalize).join(" ")
-  end
 
+def titleize (title)
+    lower_words = ["the", "and"] 
+    return title.split.each_with_index.map{|x, index| lower_words.include?(x) && index > 0 ? x : x.capitalize }.join(" ")
+  end
