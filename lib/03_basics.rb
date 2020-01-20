@@ -1,26 +1,26 @@
-def who_is_bigger (a,b,c)
-	first = a
-	second = b
-	third = c
+
+def who_is_bigger(a,b,c)
 	
-	if a == nil || b == nil || c == nil
-		puts "nil detected"
-
+	if a == nil || b == nil || c == nil 
+	return "nil detected"
+  end
+  if a >= b && a >= c 
+	  return "a is bigger"
+  elsif b >= a && a >= c
+	  return "b is bigger"
+  elsif c >= a && a >= b
+	  return "c is bigger"
+  end
 end
 
-if first > second && first > third
-	return "a is bigger"
+def reverse_upcase_noLTA(str)
+str.reverse.upcase.delete("LTA")
 end
 
-if second >first && second >third 
-   return "b is bigger"
+def array_42(array)
+array.any?(42)
 end
 
-if third >first && third >second
-   return "c is bigger"
-end
-
-
-
-def reverse_upcase_noLTA ()
+def magic_array(array)
+array.flatten.sort.map{|x| x * 2}.delete_if{|x| x % 3 == 0}.uniq
 end
